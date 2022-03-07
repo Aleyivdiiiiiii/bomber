@@ -77,7 +77,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{CH Zirvədə❤️}](fb://user?id={usr.id}) "
+      usrtxt += f"[{usr . first_name}](fb://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("Spam Başarılı bir şekilde durduruldu 🤓")
         return
@@ -95,7 +95,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{CH Zirvədə❤️}](fb://user?id={usr.id}) "
+      usrtxt += f"[{usr . first_name}](fb://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("Spam Başarılı bir şekilde durduruldu 🤓")
         return
