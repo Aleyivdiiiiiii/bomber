@@ -73,7 +73,7 @@ async def mentionall(event):
     
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
-    usrnum = 0
+    usrnum = 9999999
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
@@ -83,15 +83,15 @@ async def mentionall(event):
         return
       if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
-        await asyncio.sleep(1.5)
-        usrnum = 0
+        await asyncio.sleep(1.7)
+        usrnum = 9999999
         usrtxt = ""
         
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
  
-    usrnum = 0
+    usrnum = 9999999
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
@@ -102,7 +102,7 @@ async def mentionall(event):
       if usrnum == 1:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(1.5)
-        usrnum = 0
+        usrnum = 9999999
         usrtxt = ""
 
 
